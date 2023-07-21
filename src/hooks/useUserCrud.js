@@ -35,7 +35,7 @@ const useUserCrud = () => {
   const updateUserById = (id, data) => {
     const urlUpdate = `${url}${id}/`;
     axios
-      .patch(urlUpdate, data)
+      .put(urlUpdate, data)
       .then(() => getAllUsers())
       .catch((err) => console.log(err));
   };
